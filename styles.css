@@ -1,12 +1,28 @@
 /* CSS file */
 
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
 :root {
     --image_height: 1128px;
+    --image_width:564px;
+    --profile_size: 150px;
+    --orange1: rgb(255, 163, 4);
+    --yellow1: rgb(252, 207, 7);
 }
 
 * {
     margin:0;
     padding:0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
 }
 
 .background-div {
@@ -17,6 +33,7 @@
     width:100vw;
     height:auto;
     z-index:0;
+
     /* background-color:blue */
 }
 
@@ -25,6 +42,9 @@
     display:block;
     margin:auto;
     z-index:2;
+    min-height:100vh;
+    width: var(--image_width);
+    height: var(--image_height);
 }
 
 .blur {
@@ -35,9 +55,10 @@
     z-index: 0;
     top:0;
     left:0;
-    filter:blur(5px);
+    filter:blur(0.6vh);
     height:var(--image_height);
-    width:100%
+    width:100%;
+    min-height:100vh;
 }
 
 .cover {
@@ -49,5 +70,75 @@
     top:0;
     left:0;
     height:var(--image_height);
-    width:100%
+    width:100%;
+    min-height:100vh;
+}
+
+.profile {
+    display:block;
+    position:relative;
+    top:0;
+    left:0;
+    width:100vw;
+    height:auto;
+    z-index:3;
+    /* background-color: green; */
+}
+
+.profile-picture {
+    position: relative;
+    top: 80px;
+    display:block;
+    margin:auto;
+    width: var(--profile_size);
+    height: var(--profile_size);
+    border-radius: 50%;
+    border: 5px solid var(--orange1);
+}
+
+.profile-name {
+    font-family: 'Arizonia', cursive;
+    font-weight:bold;
+    font-size: 50px;
+    position:relative;
+    display: block;
+    margin:auto;
+    text-align: center;
+    /* background-color: blue; */
+    top: 60px;
+    color: var(--yellow1);
+}
+
+.links-div {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    /* background-color:red; */
+    width:var(--image_width);
+    height: 600px;
+    margin:auto;
+    top:150px;
+}
+
+.link-div {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    height:60px;
+    width: 260px;
+    margin:auto;
+    background-color:rgba(255, 255, 255, 0.13);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid var(--orange1);
+}
+
+a {
+    text-decoration: none;
+    font-weight:bold;
+    font-size:20px;
+    color: white;
 }
