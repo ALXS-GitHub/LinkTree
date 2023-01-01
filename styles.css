@@ -1,20 +1,53 @@
 /* CSS file */
 
+:root {
+    --image_height: 1128px;
+}
+
 * {
     margin:0;
     padding:0;
 }
 
 .background-div {
+    display:block;
     position:absolute;
     top:0;
     left:0;
     width:100vw;
     height:auto;
-    background-color:blue
+    z-index:0;
+    /* background-color:blue */
 }
 
 .background {
+    position: relative;
     display:block;
     margin:auto;
+    z-index:2;
+}
+
+.blur {
+    margin:0;
+    padding:0;
+    display:block;
+    position:absolute;
+    z-index: 0;
+    top:0;
+    left:0;
+    filter:blur(5px);
+    height:var(--image_height);
+    width:100%
+}
+
+.cover {
+    margin:0;
+    padding:0;
+    display:block;
+    position:absolute;
+    z-index: -1;
+    top:0;
+    left:0;
+    height:var(--image_height);
+    width:100%
 }
