@@ -196,3 +196,33 @@ a {
     }
 
 }
+
+@media screen and (max-width: 564px) {
+
+    :root {
+        --image_width: 100vw;
+    }
+
+    .background-div {
+        position:absolute;
+        width: 100vw;
+    }
+
+    .background {
+        position: absolute;
+        width: 100vw;
+    }
+
+    .blur {
+        display: none;
+    }
+
+    .cover {
+        display: none;  
+    }
+
+    main {
+        width: 100vw;
+        overflow-y: none;
+    }
+}
